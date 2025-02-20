@@ -22,8 +22,8 @@
 // }
 
 
-const fruits = ["apple", "banana", "Kiwi", "cherry", "mango", "black berry", "straw berry", "mellon"];
-console.log(fruits)
-fruits[fruits.indexOf("Kiwi")] = "Orange";
+//     const fruits = ["apple", "banana", "Kiwi", "cherry", "mango", "black berry", "straw berry", "mellon"];
+//     console.log(fruits)
+//     fruits[fruits.indexOf("Kiwi")] = "Orange";
 
-console.log(fruits);
+//     console.log(fruits);
