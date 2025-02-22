@@ -17,3 +17,5 @@ for (guy in person){
 }
 document.getElementById("sec").innerHTML = text;
 
+//Constructing a new object
+
