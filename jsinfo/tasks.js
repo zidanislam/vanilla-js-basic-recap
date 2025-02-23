@@ -1,3 +1,5 @@
+"use strict"
+
 // task-1
 alert("I'm JavaScript");
 
@@ -40,9 +42,9 @@ let d = b++; // 1
 
 // task-8
 
-let a = 2;
+let test_a = 2;
 
-let x = 1 + (a *= 2); // a = 4 b = 5
+let x = 1 + (test_a *= 2); // test_a = 4 b = 5
 
 // task-9
 
@@ -63,7 +65,7 @@ undefined + 1 // NaN (undefined becomes NaN after the numeric conversion.)
 
 //task-10
 
-let a = prompt("First number?", 1);
-let b = prompt("Second number?", 2);
+let task_a = prompt("First number?", 1);
+let task_b = prompt("Second number?", 2);
 
-alert(+a + +b); // 3
+alert(+task_a + +task_b); // 3
