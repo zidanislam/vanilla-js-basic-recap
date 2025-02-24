@@ -69,3 +69,12 @@ let task_a = prompt("First number?", 1);
 let task_b = prompt("Second number?", 2);
 
 alert(+task_a + +task_b); // 3
+
+// task-11
+5 > 4
+"apple" > "pineapple"
+"2" > "12"
+undefined == null
+undefined === null
+null == "\n0\n"
+null === +"\n0\n"
