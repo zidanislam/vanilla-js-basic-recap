@@ -154,4 +154,18 @@ if (loginAlert == "Admin"){
     }
 } else if ( loginAlert == " " || loginAlert == null){
     alert("Canceled")
-} else {alert("I don’t know you")}
+} else {alert("I don’t know you")}  
+
+// example-1
+let sum = 0;
+
+while (true) {
+
+    let value = +prompt("Enter a number", '');
+
+    if (!value) break; // (*)
+
+    sum += value;
+
+}
+alert('Sum: ' + sum);
