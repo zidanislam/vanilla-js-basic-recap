@@ -65,3 +65,19 @@ for (let i = 2; i <= n; i++) {
         alert(i)
     }
 }
+
+// or
+
+findPrime: for (let n = 2; n <= 10; n++) {
+    let isPrime = true;
+
+    for (let j = 2; j < n; j++) {
+        if (n % j === 0) {
+            isPrime = false;
+            continue findPrime;
+        }
+    }
+    if (isPrime) {
+        console.log(n)
+    }
+}
