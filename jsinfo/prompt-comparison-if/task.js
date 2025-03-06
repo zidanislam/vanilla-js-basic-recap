@@ -8,13 +8,13 @@ let task_b = prompt("Second number?", 2);
 alert(+task_a + +task_b); // 3
 
 // task-11
-5 > 4 //true
-"apple" > "pineapple" //false
-"2" > "12" //true
-undefined == null //true
-undefined === null // false
-null == "\n0\n" // false
-null === +"\n0\n" // false
+// 5 > 4 //true
+// "apple" > "pineapple" //false
+// "2" > "12" //true
+// undefined == null //true
+// undefined === null // false
+// null == "\n0\n" // false
+// null === +"\n0\n" // false
 
 // if & conditional operation
 
@@ -52,14 +52,14 @@ if (number > 0) {
 
 // task-14
 
-let result;
-(a + b < 4) ? result = "Below" : result = "Over";
+// let result;
+// (a + b < 4) ? result = "Below" : result = "Over";
 
 // task-15
-let messages = (login == 'Employee') ?
-    'Hello' :
-    (login == 'Director') ?
-        'Greetings' :
-        (login == '') ?
-            'No login' :
-            '';
+// let messages = (login == 'Employee') ?
+//     'Hello' :
+//     (login == 'Director') ?
+//         'Greetings' :
+//         (login == '') ?
+//             'No login' :
+//             '';

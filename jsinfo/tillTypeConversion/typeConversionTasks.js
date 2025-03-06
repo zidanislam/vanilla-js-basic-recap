@@ -14,6 +14,7 @@ alert(admin)
 // task-4
 
 const ourPlanet = "Earth";
+console.log(ourPlanet)
 let currentUserName = "John";
 
 //task-5
@@ -29,6 +30,7 @@ alert(`hello ${name}`); // Hello Ilya
 // task-6
 
 let currentVisitorName = prompt("What is your name", "John");
+console.log(currentVisitorName)
 alert(`Your name is ${currentUserName}`);
 
 // task-7
@@ -37,6 +39,8 @@ let a = 1, b = 1;
 
 let c = ++a; // 2
 let d = b++; // 1
+console.log(c)
+console.log(d)
 // a = 2
 // b = 2
 
@@ -45,6 +49,7 @@ let d = b++; // 1
 let test_a = 2;
 
 let x = 1 + (test_a *= 2); // test_a = 4 b = 5
+console.log(x)
 
 // task-9
 

@@ -12,7 +12,7 @@ const person = {
 
 // document.getElementById("sec").innerHTML = stringify;
 let text = "";
-for (guy in person){
+for (let guy in person){
     text+= person[guy] + ", ";
 }
 document.getElementById("sec").innerHTML = text;

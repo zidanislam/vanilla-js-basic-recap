@@ -1,5 +1,6 @@
 "use strict"
 
+let browser;
 if(browser === "Edge"){
     console.log("You've got the Edge!")
 }else if(browser === "Chrome" ||

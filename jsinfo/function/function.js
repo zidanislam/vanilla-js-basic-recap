@@ -16,22 +16,22 @@ let from2 = "Ann";
 let text2 = "hello"
 showMessage2(from2, text2);
 
-function pow(x,n){
-    let result = x;
-    for (let i=1; i<n; i++){
+function pow(a,b){
+    let result = a;
+    for (let i=1; i<b; i++){
         result *= x;
     }
     console.log(result);
     return result;
 }
 
-let x = prompt("input the number");
-let n = prompt("Input the power");
+let a = prompt("input the number");
+let b = prompt("Input the power");
 
-if(n<1){
-    alert(`the value of ${n} is too low`);
+if(b<1){
+    alert(`the value of ${b} is too low`);
 }else{
-    alert(pow(x,n));
+    alert(pow(a,b));
 }
 
 
@@ -61,21 +61,43 @@ ask("Do you agree?", showYes, showCancel);
 
 //short form
 
-function ask(question, yes, no){
+function ask2(question, yes, no){
     confirm(question) ? yes():no();
 }
-ask("Do you agree?",
+ask2("Do you agree?",
     function() {alert("You agreed");},
     function() {alert("You canceled");}
 );
 
 //arrow function task
 
-let ask = (question, yes, no)=>{
+let ask3 = (question, yes, no)=>{
     confirm(question)? yes() : no()
 }
 
-ask("Do you agree",
+ask3("Do you agree",
     ()=> alert("You agreed"),
     ()=> alert("You Cancled")
 )
+
+// Styling the code
+
+function pow2(x, n) {
+    let result = 1;
+
+    for (let i = 0; i < n; i++) { 
+        result *= x; 
+    }
+
+    return result;
+}
+
+let x = prompt("x?", '');
+let n = prompt("n?", '');
+
+if (n <= 0) {
+    alert(`Power ${n} is not supported, please enter
+         an integer number greater than zero`);
+} else {
+    alert( pow2(x, n) );
+}
