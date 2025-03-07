@@ -1,103 +1,110 @@
-"use strict"
+"use strict";
 
 let from = prompt("name", "name");
-let text = prompt("message", "message")
-function showMessage(from, text) { // parameters: from, text
-    alert(from + ': ' + text);
+let text = prompt("message", "message");
+function showMessage(from, text) {
+  // parameters: from, text
+  alert(from + ": " + text);
 }
 
 showMessage(from, text); // Ann: Hello! (*)
 
-function showMessage2(from, text){
-    from = "*" + from + "*";
-    console.log(from+":" + text) 
+function showMessage2(from, text) {
+  from = "*" + from + "*";
+  console.log(from + ":" + text);
 }
 let from2 = "Ann";
-let text2 = "hello"
+let text2 = "hello";
 showMessage2(from2, text2);
 
-function pow(a,b){
-    let result = a;
-    for (let i=1; i<b; i++){
-        result *= x;
-    }
-    console.log(result);
-    return result;
+function pow(a, b) {
+  let result = a;
+  for (let i = 1; i < b; i++) {
+    result *= x;
+  }
+  console.log(result);
+  return result;
 }
 
 let a = prompt("input the number");
 let b = prompt("Input the power");
 
-if(b<1){
-    alert(`the value of ${b} is too low`);
-}else{
-    alert(pow(a,b));
+if (b < 1) {
+  alert(`the value of ${b} is too low`);
+} else {
+  alert(pow(a, b));
 }
-
 
 // function expression
 
 function sayHi() {
-    alert("Hello");
+  alert("Hello");
 }
 
-let func = sayHi;    
-func(); 
+let func = sayHi;
+func();
 sayHi();
 // 1
-function ask(question, yes, no){
-    if(confirm(question))yes();
-    else {no()};
+function ask(question, yes, no) {
+  if (confirm(question)) yes();
+  else {
+    no();
+  }
 }
 
-
-let showYes = function(){
-    alert("you agreed!")
-}
-let showCancel = function(){
-    alert("you Canceled");
-}
+let showYes = function () {
+  alert("you agreed!");
+};
+let showCancel = function () {
+  alert("you Canceled");
+};
 ask("Do you agree?", showYes, showCancel);
 
 //short form
 
-function ask2(question, yes, no){
-    confirm(question) ? yes():no();
+function ask2(question, yes, no) {
+  confirm(question) ? yes() : no();
 }
-ask2("Do you agree?",
-    function() {alert("You agreed");},
-    function() {alert("You canceled");}
+ask2(
+  "Do you agree?",
+  function () {
+    alert("You agreed");
+  },
+  function () {
+    alert("You canceled");
+  }
 );
 
 //arrow function task
 
-let ask3 = (question, yes, no)=>{
-    confirm(question)? yes() : no()
-}
+let ask3 = (question, yes, no) => {
+  confirm(question) ? yes() : no();
+};
 
-ask3("Do you agree",
-    ()=> alert("You agreed"),
-    ()=> alert("You Cancled")
-)
+ask3(
+  "Do you agree",
+  () => alert("You agreed"),
+  () => alert("You Cancled")
+);
 
 // Styling the code
 
 function pow2(x, n) {
-    let result = 1;
+  let result = 1;
 
-    for (let i = 0; i < n; i++) { 
-        result *= x; 
-    }
+  for (let i = 0; i < n; i++) {
+    result *= x;
+  }
 
-    return result;
+  return result;
 }
 
-let x = prompt("x?", '');
-let n = prompt("n?", '');
+let x = prompt("x?", "");
+let n = prompt("n?", "");
 
 if (n <= 0) {
-    alert(`Power ${n} is not supported, please enter
+  alert(`Power ${n} is not supported, please enter
          an integer number greater than zero`);
 } else {
-    alert( pow2(x, n) );
+  alert(pow2(x, n));
 }
