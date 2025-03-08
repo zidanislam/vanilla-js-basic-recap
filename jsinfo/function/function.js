@@ -108,3 +108,34 @@ if (n <= 0) {
 } else {
   alert(pow2(x, n));
 }
+
+function showPrime(n) {
+  nextPrime: for (let i = 2; i < n; i++) {
+    console.log(i);
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) continue nextPrime;
+    }
+
+    // console.log(i);
+  }
+}
+showPrime(prompt("Input a number", 0));
+
+//other way
+
+function showPrimes(n) {
+  for (let i = 2; i < n; i++) {
+    if (!isPrime(i)) continue;
+
+    alert(i);
+  }
+}
+
+function isPrime(n) {
+  //1st function forwards the number to "n" to check if it's prime
+  for (let i = 2; i < n; i++) {
+    if (n % i == 0) return false;
+  }
+
+  return true;
+}

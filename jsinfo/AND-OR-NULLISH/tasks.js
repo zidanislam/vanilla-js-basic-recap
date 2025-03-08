@@ -15,14 +15,16 @@
 let loginAlert = prompt("Who's there?", "");
 
 if (loginAlert == "Admin") {
-    let password = prompt("Password please", "");
-    if (password == "TheMaster") {
-        alert("Welcome!")
-    } else if (password == " " || password == null) {
-        alert("Canceled")
-    } else {
-        alert("Wrong password")
-    }
+  let password = prompt("Password please", "");
+  if (password == "TheMaster") {
+    alert("Welcome!");
+  } else if (password == " " || password == null) {
+    alert("Canceled");
+  } else {
+    alert("Wrong password");
+  }
 } else if (loginAlert == " " || loginAlert == null) {
-    alert("Canceled")
-} else { alert("I don’t know you") }  
+  alert("Canceled");
+} else {
+  alert("I don’t know you");
+}

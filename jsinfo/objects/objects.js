@@ -1,9 +1,9 @@
 const person = {
-    name:"John Doe",
-    age: 28,
-    country: "Italy",
-    occupation: "Street Vendor"
-}
+  name: "John Doe",
+  age: 28,
+  country: "Italy",
+  occupation: "Street Vendor",
+};
 
 // console.log(Object.values(person));
 // console.log(JSON.stringify(person));
@@ -12,10 +12,9 @@ const person = {
 
 // document.getElementById("sec").innerHTML = stringify;
 let text = "";
-for (let guy in person){
-    text+= person[guy] + ", ";
+for (let guy in person) {
+  text += person[guy] + ", ";
 }
 document.getElementById("sec").innerHTML = text;
 
 //Constructing a new object
-
