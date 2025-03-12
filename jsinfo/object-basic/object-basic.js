@@ -96,3 +96,24 @@ const customer = {
 let cloneCustomer = structuredClone(customer);
 cloneCustomer.size.height = 333;
 console.log(cloneCustomer.size.height);
+
+//this methods
+
+let userFunctionShortend = {
+  sayHi() {
+    alert("Hello");
+  },
+};
+console.log(userFunctionShortend);
+
+let userWithThis = {
+  name: "John",
+  age: 30,
+
+  sayHi() {
+    // "this" is the "current object"
+    alert(this.name);
+  },
+};
+
+user.sayHi();
