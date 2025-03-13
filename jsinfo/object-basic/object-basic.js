@@ -98,22 +98,29 @@ cloneCustomer.size.height = 333;
 console.log(cloneCustomer.size.height);
 
 //this methods
-
-let userFunctionShortend = {
-  sayHi() {
-    alert("Hello");
-  },
-};
-console.log(userFunctionShortend);
-
-let userWithThis = {
+let user21 = {
   name: "John",
   age: 30,
 
   sayHi() {
     // "this" is the "current object"
-    alert(this.name);
+    console.log(this.name);
   },
 };
 
-user.sayHi();
+user21.sayHi();
+
+// use of this in dynamically
+
+let user3 = { name: "John" };
+let admin = { name: "Sam" };
+
+function sayHello() {
+  console.log(`Hello ${this.name}`);
+}
+
+user3.f = sayHello;
+admin.f = sayHello;
+
+user3.f();
+admin.f();
