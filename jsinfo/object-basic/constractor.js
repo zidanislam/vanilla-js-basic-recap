@@ -5,80 +5,84 @@ function User(name) {
   this.isAdmin = false;
 }
 
-new User("John");
-new User("Jack");
-new User("Jamse");
+const id = Symbol("id");
+User[id] = 1;
+console.log(User[id]);
 
-console.log(new User("Jamse"));
+// new User("John");
+// new User("Jack");
+// new User("Jamse");
 
-function Person(fName, lName, age, eye) {
-  this.firstName = fName;
-  this.lastName = lName;
-  this.age = age;
-  this.eyeColor = eye;
-  this.fullName = function () {
-    return this.firstName + " " + this.lastName;
-  };
-}
+// console.log(new User("Jamse"));
 
-const rakib = new Person("Rakib", "Rahman", 23, "Black");
-console.log(rakib.fullName());
+// function Person(fName, lName, age, eye) {
+//   this.firstName = fName;
+//   this.lastName = lName;
+//   this.age = age;
+//   this.eyeColor = eye;
+//   this.fullName = function () {
+//     return this.firstName + " " + this.lastName;
+//   };
+// }
 
-function SmallUser() {
-  this.name = "John";
-  this.age = 34;
-  this.lName = "Maxwell";
+// const rakib = new Person("Rakib", "Rahman", 23, "Black");
+// console.log(rakib.fullName());
 
-  return; // <-- returns this
-}
+// function SmallUser() {
+//   this.name = "John";
+//   this.age = 34;
+//   this.lName = "Maxwell";
 
-console.log(new SmallUser().age);
+//   return; // <-- returns this
+// }
 
-let obj = { name: "Leo", age: 53 };
-function A() {
-  return obj;
-}
-function B() {
-  return obj;
-}
+// console.log(new SmallUser().age);
 
-let a = new A();
-let b = new B();
+// let obj = { name: "Leo", age: 53 };
+// function A() {
+//   return obj;
+// }
+// function B() {
+//   return obj;
+// }
 
-console.log(a == b);
+// let a = new A();
+// let b = new B();
 
-function Calculator() {
-  this.read = function () {
-    this.a = 2; //+prompt("a?", 0);
-    this.b = 3; //+prompt("b?", 0);
-  };
-  this.sum = function () {
-    return this.a + this.b;
-  };
-  this.mul = function () {
-    return this.a * this.b;
-  };
-}
-let calculator = new Calculator();
-console.log(calculator.read());
+// console.log(a == b);
 
-console.log("Sum=" + calculator.sum());
-console.log("Mul=" + calculator.mul());
+// function Calculator() {
+//   this.read = function () {
+//     this.a = 2; //+prompt("a?", 0);
+//     this.b = 3; //+prompt("b?", 0);
+//   };
+//   this.sum = function () {
+//     return this.a + this.b;
+//   };
+//   this.mul = function () {
+//     return this.a * this.b;
+//   };
+// }
+// let calculator = new Calculator();
+// console.log(calculator.read());
 
-function Accumulator(startingValue) {
-  this.value = startingValue;
-  this.read = function () {
-    this.value += +prompt("How much to add?", 0);
-  };
-}
-let accumulator = new Accumulator(1); // initial value 1
+// console.log("Sum=" + calculator.sum());
+// console.log("Mul=" + calculator.mul());
 
-accumulator.read(); // adds the user-entered value
-accumulator.read(); // adds the user-entered value
+// function Accumulator(startingValue) {
+//   this.value = startingValue;
+//   this.read = function () {
+//     this.value += +prompt("How much to add?", 0);
+//   };
+// }
+// let accumulator = new Accumulator(1); // initial value 1
 
-console.log(accumulator.value);
+// accumulator.read(); // adds the user-entered value
+// accumulator.read(); // adds the user-entered value
 
-let user = null;
+// console.log(accumulator.value);
 
-console.log(user?.address); // undefined
-console.log(user?.address.street); // undefined
+// let user = null;
+
+// console.log(user?.address); // undefined
+// console.log(user?.address.street); // undefined
