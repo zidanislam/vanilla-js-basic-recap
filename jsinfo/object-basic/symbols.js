@@ -8,6 +8,12 @@ console.log(name);
 
 console.log(id.description);
 
-let title = "JavaScript";
+let user = {
+  name: "John",
+  [id]: 113, // not "id": 123
+};
+console.log(user[id]);
 
-console.log(title.search("Script"));
+let clone = Object.assign({}, user);
+
+console.log(clone[id]);
