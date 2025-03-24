@@ -82,3 +82,8 @@ let sorted = copySorted(arrText);
 
 console.log(sorted); // CSS, HTML, JavaScript
 console.log(arrText);
+
+let userList = ["John", "John", "Pete", "Pete", "Mary", "Mary", "John"];
+
+let uniqueArray = [...new Set(userList)];
+console.log(uniqueArray);
