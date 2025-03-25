@@ -87,3 +87,16 @@ let userList = ["John", "John", "Pete", "Pete", "Mary", "Mary", "John"];
 
 let uniqueArray = [...new Set(userList)];
 console.log(uniqueArray);
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+
+function sortByAge(users) {
+  return (
+    users.map((user) => user.age).reduce((acc, num) => acc + num, 0) /
+    users.length
+  );
+}
+let arr2 = [pete, john, mary];
+console.log(sortByAge(arr2));
