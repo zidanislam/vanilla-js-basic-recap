@@ -100,3 +100,27 @@ function sortByAge(users) {
 }
 let arr2 = [pete, john, mary];
 console.log(sortByAge(arr2));
+// function filterRangeInPlace(arr, a, b) {
+//   for (let i = 0; i < arr.length; i++) {
+//     let val = arr[i];
+//     if (a <= val || val <= b) {
+//       arr.splice(i, 1);
+//     }
+//   }
+// }
+
+// let arr = [5, 3, 8, 1];
+
+// filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+// console.log(arr);
+
+// function copySorted(array) {
+//   return array.slice().sort();
+// }
+
+// let array = ["HTML", "JavaScript", "CSS"];
+
+// let sorted = copySorted(array);
+
+// console.log(sorted); // CSS, HTML, JavaScript
+// console.log(array);
