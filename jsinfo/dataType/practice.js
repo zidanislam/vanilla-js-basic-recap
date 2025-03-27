@@ -44,3 +44,33 @@
 // Create an extendable calculator
 // Shuffle an array
 // Create keyed object from array
+
+// Map()
+let obj = {
+  name: "Zidan",
+  age: 27,
+  gender: "male",
+};
+
+let newMap = new Map(Object.entries(obj)); //Here, Object.entries returns the array of key/value pairs: [ ["name","John"], ["age", 30] ]. That’s what Map needs.
+
+console.log(newMap);
+
+let map = new Map([
+  [1, "star"],
+  [2, "Boss"],
+  [true, false],
+  [0, "zero"],
+  [-0, "negative zero"],
+  [NaN, "not a number"],
+  [Number(), NaN],
+]);
+// let map = new Map();
+
+// map.set("name", "John");
+
+let keys = Array.from(map.keys());
+
+// Error: keys.push is not a function
+keys.push("more");
+console.log(keys);
