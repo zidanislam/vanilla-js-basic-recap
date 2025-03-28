@@ -56,21 +56,16 @@ let newMap = new Map(Object.entries(obj)); //Here, Object.entries returns the ar
 
 console.log(newMap);
 
-let map = new Map([
-  [1, "star"],
-  [2, "Boss"],
-  [true, false],
-  [0, "zero"],
-  [-0, "negative zero"],
-  [NaN, "not a number"],
-  [Number(), NaN],
-]);
-// let map = new Map();
+let john = { name: "John" };
 
-// map.set("name", "John");
+let array = [john];
 
-let keys = Array.from(map.keys());
+// john = null;
 
-// Error: keys.push is not a function
-keys.push("more");
-console.log(keys);
+console.log(john);
+
+let weakMap = new WeakMap();
+
+weakMap.set(john, "ok");
+
+console.log(weakMap.has(john));
