@@ -69,3 +69,28 @@ let weakMap = new WeakMap();
 weakMap.set(john, "ok");
 
 console.log(weakMap.has(john));
+
+// Destructuring
+
+let options = {
+  title: "My menu",
+  items: ["Item1", "Item2"],
+};
+
+function showMenu({ title = "untitle", height = 144, width = 22, items = [] }) {
+  //make sure to add "{}" before destructuring an object inside a function parameter
+  console.log(title);
+  console.log(height);
+  console.log(width);
+  console.log(items);
+}
+
+showMenu(options);
+
+let user = { name: "John", years: 30 };
+
+let { name, years: age, isAdmin = false } = user;
+
+console.log(name); // John
+console.log(age); // 30
+console.log(isAdmin); // false
