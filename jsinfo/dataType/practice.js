@@ -94,3 +94,44 @@ let { name, years: age, isAdmin = false } = user;
 console.log(name); // John
 console.log(age); // 30
 console.log(isAdmin); // false
+
+function random(min, max) {
+  return min + Math.random() * (max - min);
+}
+
+// console.log(random(1, 5));
+// console.log(random(1, 5));
+// console.log(random(1, 5));
+
+function randomInteger(min, max) {
+  return min + Math.floor(Math.random() * (max - min + 1));
+}
+
+console.log(randomInteger(1, 5));
+console.log(randomInteger(1, 5));
+console.log(randomInteger(1, 5));
+
+function capFirst(str) {
+  if (!str) return str;
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+console.log(capFirst("john"));
+
+function turnicate(str, maxlength) {
+  if (str.length >= maxlength) {
+    return str.slice(0, maxlength - 1) + "…";
+  } else return str;
+}
+console.log(turnicate("What I'd like to tell on this topic is:", 20));
+
+console.log(turnicate("Hi everyone!", 20));
+console.log(turnicate("1234567890123456789012345", 20));
+console.log(turnicate("Short", 10));
+
+function extractCurrencyValue(str) {
+  let num = str.slice(1);
+  return +num;
+}
+
+console.log(extractCurrencyValue("$120"));

@@ -1,39 +1,39 @@
 "use strict";
 
 // learge numbers like billions in short way
-let billion = 1e9;
-let oneBillion = 1000_000_000;
+// let billion = 1e9;
+// let oneBillion = 1000_000_000;
 
-console.log(billion);
-console.log(oneBillion);
+// console.log(billion);
+// console.log(oneBillion);
 
-let oneMicroSecond = 1e-6;
+// let oneMicroSecond = 1e-6;
 
-console.log(oneMicroSecond);
+// console.log(oneMicroSecond);
 
 // toString
 
-console.log(billion.toString(36));
-console.log(billion.toString(16));
-console.log(billion.toString(8));
-console.log(billion.toString(2));
-console.log(billion.toString());
+// console.log(billion.toString(36));
+// console.log(billion.toString(16));
+// console.log(billion.toString(8));
+// console.log(billion.toString(2));
+// console.log(billion.toString());
 
-const decimalNumber = 123.5455678;
+// const decimalNumber = 123.5455678;
 
-console.log(Math.ceil(decimalNumber));
-console.log(Math.floor(decimalNumber));
-console.log(Math.round(decimalNumber));
-console.log(Math.trunc(decimalNumber));
-console.log(decimalNumber.toFixed(2));
-console.log(+decimalNumber.toFixed(2));
-console.log(decimalNumber.toLocaleString(2));
-console.log(decimalNumber.toExponential(2));
-console.log(decimalNumber.toPrecision(2));
+// console.log(Math.ceil(decimalNumber));
+// console.log(Math.floor(decimalNumber));
+// console.log(Math.round(decimalNumber));
+// console.log(Math.trunc(decimalNumber));
+// console.log(decimalNumber.toFixed(2));
+// console.log(+decimalNumber.toFixed(2));
+// console.log(decimalNumber.toLocaleString(2));
+// console.log(decimalNumber.toExponential(2));
+// console.log(decimalNumber.toPrecision(2));
 
 // infinity
 
-console.log(1e500); // Infinity
+// console.log(1e500); // Infinity
 
 // isFinite, isNaN & Object.is()
 // let num = +prompt("Enter a number", "");
@@ -41,8 +41,8 @@ console.log(1e500); // Infinity
 // will be true unless you enter Infinity, -Infinity or not a number
 // alert(isFinite(num));
 
-console.log(Object.is(0, -0));
-console.log(Object.is(NaN, NaN));
+// console.log(Object.is(0, -0));
+// console.log(Object.is(NaN, NaN));
 
 // task-1
 
