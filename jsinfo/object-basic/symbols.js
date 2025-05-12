@@ -13,10 +13,10 @@ let user = {
   [id]: 113, // not "id": 123
 };
 
-console.log(user);
+console.log(typeof id);
 // console.log(user);
 
-let clone = Object.assign({}, user);
+// let clone = Object.assign({}, user);
 
 // console.log(clone[id]);
 
@@ -31,7 +31,7 @@ const anotherObj = {
   age: 12,
 };
 
-console.log(obj.age < anotherObj.age);
+// console.log(obj.age < anotherObj.age);
 
 let usersInfo = {
   name: "John",
@@ -44,6 +44,6 @@ let usersInfo = {
   },
 };
 
-console.log(`User from console: ${usersInfo}`);
-console.log(+usersInfo + 5000);
-console.log(usersInfo + 2);
+// console.log(`User from console: ${usersInfo}`);
+// console.log(+usersInfo + 5000);
+// console.log(usersInfo + 2);

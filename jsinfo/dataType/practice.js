@@ -135,3 +135,48 @@ function extractCurrencyValue(str) {
 }
 
 console.log(extractCurrencyValue("$120"));
+
+const styles = ["Zazz", "Blues"];
+styles.push("Rock-n-Roll");
+styles[Math.floor((styles.length - 1) / 2)] = "Classic";
+console.log(styles.shift());
+styles.push(function () {
+  alert(this);
+});
+console.log(styles);
+
+function getMaxSubSum(arr) {
+  let sum = 0;
+  let maxSum = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+    if (sum > maxSum) {
+      maxSum = sum;
+    }
+    if (sum < 0) {
+      sum = 0;
+    }
+  }
+  return maxSum;
+}
+
+function getMaxSubSum2(arr) {
+  let currSum = 0;
+  let maxSum = 0;
+
+  for (let item of arr) {
+    currSum += item;
+    maxSum = Math.max(currSum, maxSum);
+    if (currSum < 0) currSum = 0;
+  }
+  return maxSum;
+}
+
+console.log(getMaxSubSum([-1, 2, 3, -9]));
+console.log(getMaxSubSum([2, -1, 2, 3, -9]));
+console.log(getMaxSubSum([-1, 2, 3, -9, 11]));
+console.log(getMaxSubSum([-2, -1, 1, 2]));
+console.log(getMaxSubSum([100, -9, 2, -3, 5]));
+console.log(getMaxSubSum([1, 2, 3]));
+console.log(getMaxSubSum([-1, -2]));
