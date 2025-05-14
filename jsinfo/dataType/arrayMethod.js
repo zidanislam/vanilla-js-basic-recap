@@ -75,20 +75,35 @@ function camelize(str) {
 console.log(camelize("background-color"));
 
 // REDUCE
+const grouppedUser = users.reduce((allUser, user) => {
+  const name = user.name;
+  if (allUser[name] == null) {
+    allUser[name] = [];
+  }
+  allUser[name].push(user.id);
+  return allUser;
+}, {});
+console.log(grouppedUser);
+
 let totalVal = arrNumber.reduce((sum, current) => sum + current);
 console.log(totalVal);
-// console.log(Array.isArray(totalVal));
-// console.log(Array.isArray(arrNumber));
+console.log(Array.isArray(totalVal));
+console.log(Array.isArray(arrNumber));
 
-// function filterRangeInPlace(arr, a, b) {
-//   arr.forEach((i) => a <= i <= b);
-//   return arr;
-// }
-// let arr = [5, 3, 8, 1];
+// thisArg
+let army = {
+  minAge: 18,
+  maxAge: 27,
+  canJoin(user) {
+    return user.age >= this.minAge && user.age < this.maxAge;
+  },
+};
 
-// filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+let armyCandidates = [{ age: 16 }, { age: 20 }, { age: 23 }, { age: 30 }];
 
-// console.log(arr);
+let soldiers = armyCandidates.filter(army.canJoin, army);
+
+console.log(soldiers);
 
 // function copySorted(str) {
 //   let sortedStr = str.slice().sort();
