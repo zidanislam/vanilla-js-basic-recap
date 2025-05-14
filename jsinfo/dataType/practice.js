@@ -266,3 +266,23 @@ let strings = [
 ];
 
 console.log(unique(strings));
+
+function groupById(arr) {
+  return arr.reduce((initial, user) => {
+    initial[user.id] = user;
+    return initial;
+  }, {});
+}
+
+let usersById = groupById(users);
+console.log(usersById);
+
+/*
+// after the call we should have:
+
+usersById = {
+  john: {id: 'john', name: "John Smith", age: 20},
+  ann: {id: 'ann', name: "Ann Smith", age: 24},
+  pete: {id: 'pete', name: "Pete Peterson", age: 31},
+}
+*/
