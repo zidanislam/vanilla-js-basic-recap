@@ -105,56 +105,56 @@ let soldiers = armyCandidates.filter(army.canJoin, army);
 
 console.log(soldiers);
 
-// function copySorted(str) {
-//   let sortedStr = str.slice().sort();
-//   return sortedStr;
-// }
+function copySorted(str) {
+  let sortedStr = str.slice().sort();
+  return sortedStr;
+}
 
-// let arrText = ["HTML", "JavaScript", "CSS"];
+let arrText = ["HTML", "JavaScript", "CSS"];
 
-// let sorted = copySorted(arrText);
+let sorted2 = copySorted(arrText);
 
-// console.log(sorted); // CSS, HTML, JavaScript
-// console.log(arrText);
+console.log(sorted2); // CSS, HTML, JavaScript
+console.log(arrText);
 
-// let userList = ["John", "John", "Pete", "Pete", "Mary", "Mary", "John"];
+let userList = ["John", "John", "Pete", "Pete", "Mary", "Mary", "John"];
 
-// let uniqueArray = [...new Set(userList)];
-// console.log(uniqueArray);
+let uniqueArray = [...new Set(userList)];
+console.log(uniqueArray);
 
-// let john = { name: "John", age: 25 };
-// let pete = { name: "Pete", age: 30 };
-// let mary = { name: "Mary", age: 29 };
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
 
-// function sortByAge(users) {
-//   return (
-//     users.map((user) => user.age).reduce((acc, num) => acc + num, 0) /
-//     users.length
-//   );
-// }
-// let arr2 = [pete, john, mary];
-// console.log(sortByAge(arr2));
-// function filterRangeInPlace(arr, a, b) {
-//   for (let i = 0; i < arr.length; i++) {
-//     let val = arr[i];
-//     if (a <= val || val <= b) {
-//       arr.splice(i, 1);
-//     }
-//   }
-// }
+function sortByAge(users) {
+  return (
+    users.map((user) => user.age).reduce((acc, num) => acc + num, 0) /
+    users.length
+  );
+}
+let arr2 = [pete, john, mary];
+console.log(sortByAge(arr2));
+function filterRangeInPlace(arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+    let val = arr[i];
+    if (a <= val || val <= b) {
+      arr.splice(i, 1);
+    }
+  }
+}
 
-// let arr = [5, 3, 8, 1];
+let arr = [5, 3, 8, 1];
 
-// filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
-// console.log(arr);
+filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+console.log(arr);
 
-// function copySorted(array) {
-//   return array.slice().sort();
-// }
+function copySorted2(array) {
+  return array.slice().sort();
+}
 
-// let array = ["HTML", "JavaScript", "CSS"];
+let array2 = ["HTML", "JavaScript", "CSS"];
 
-// let sorted = copySorted(array);
+let sorted = copySorted2(array2);
 
-// console.log(sorted); // CSS, HTML, JavaScript
-// console.log(array);
+console.log(sorted); // CSS, HTML, JavaScript
+console.log(array);
