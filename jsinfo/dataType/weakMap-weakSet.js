@@ -18,7 +18,7 @@ readMessages.add(messages[0]);
 // readMessages still has 2 unique elements
 
 // answer: was the message[0] read?
-alert("Read message 0: " + readMessages.has(messages[0])); // true
+console.log("Read message 0: " + readMessages.has(messages[0])); // true
 
 messages.shift();
 
@@ -27,3 +27,19 @@ messages.shift();
 const readMap = new WeakMap();
 
 readMap.set(messages[0], new Date(2017, 1, 1));
+
+let name = "john";
+
+let array = [name];
+
+name = null;
+console.log(array);
+
+let john = { name: "John" };
+
+let map = new WeakMap();
+map.set(john, "...");
+
+john = null;
+
+console.log(map.get(john));

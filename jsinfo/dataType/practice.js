@@ -137,12 +137,17 @@ function extractCurrencyValue(str) {
 console.log(extractCurrencyValue("$120"));
 
 const styles = ["Zazz", "Blues"];
+
 styles.push("Rock-n-Roll");
+
 styles[Math.floor((styles.length - 1) / 2)] = "Classic";
+
 console.log(styles.shift());
+
 styles.push(function () {
   alert(this);
 });
+
 console.log(styles);
 
 function getMaxSubSum(arr) {
@@ -181,101 +186,12 @@ console.log(getMaxSubSum([100, -9, 2, -3, 5]));
 console.log(getMaxSubSum([1, 2, 3]));
 console.log(getMaxSubSum([-1, -2]));
 
-function camelize(str) {
-  return str
-    .split("-")
-    .map((word, index) =>
-      index == 0 ? word : word[0].toUpperCase() + word.slice(1)
-    )
-    .join("");
-}
-
-console.log(camelize("background-color"));
-console.log(camelize("list-style-image"));
-console.log(camelize("-webkit-transition"));
-
-function copySorted(arr) {
-  return arr.slice().sort();
-}
-let arr = ["HTML", "JavaScript", "CSS"];
-
-let sorted = copySorted(arr);
-
-console.log(sorted); // CSS, HTML, JavaScript
-console.log(arr);
-
-let johny = { name: "John", surname: "Smith", id: 1, age: 25 };
-let pete = { name: "Pete", surname: "Hunt", id: 2, age: 30 };
-let mary = { name: "Mary", surname: "Key", id: 3, age: 29 };
-
-let users = [pete, johny, mary];
-
-let usersMapped = users.map((item) => ({
-  fullName: `${item.name} ${item.surname}`,
-  id: item.id,
-}));
-
 /* usersMapped = [
   { fullName: "John Smith", id: 1 },
   { fullName: "Pete Hunt", id: 2 },
   { fullName: "Mary Key", id: 3 }
 ]
 */
-
-console.log(usersMapped[0].id); // 1
-console.log(usersMapped[0].fullName); // John Smith
-
-function sortByAge(arr) {
-  return arr.sort((a, b) => a.age - b.age);
-}
-
-sortByAge(users);
-
-// now: [john, mary, pete]
-console.log(users[0].name); // John
-console.log(users[1].name); // Mary
-console.log(users[2].name); // Pete
-
-function getAverageAge(users) {
-  return (
-    users.reduce((currentAge, user) => currentAge + user.age, 0) / users.length
-  );
-}
-console.log(getAverageAge(users));
-
-function unique(arr) {
-  let str = [];
-  for (let text of arr) {
-    if (!str.includes(text)) {
-      str.push(text);
-    }
-  }
-  return str;
-}
-
-let strings = [
-  "Hare",
-  "Krishna",
-  "Hare",
-  "Krishna",
-  "Krishna",
-  "Krishna",
-  "Hare",
-  "Hare",
-  ":-O",
-];
-
-console.log(unique(strings));
-
-function groupById(arr) {
-  return arr.reduce((initial, user) => {
-    initial[user.id] = user;
-    return initial;
-  }, {});
-}
-
-let usersById = groupById(users);
-console.log(usersById);
 
 /*
 // after the call we should have:
@@ -286,3 +202,23 @@ usersById = {
   pete: {id: 'pete', name: "Pete Peterson", age: 31},
 }
 */
+
+let salaries = {
+  John: 100,
+  Pete: 300,
+  Mary: 250,
+};
+
+function topSalary(salaries) {
+  let maxSalary = 0;
+  let maxName = null;
+  for (let [name, salary] of Object.entries(salaries)) {
+    if (maxSalary < salary) {
+      maxSalary = salary;
+      maxName = name;
+    }
+  }
+  return maxName;
+}
+
+console.log(topSalary(salaries));
